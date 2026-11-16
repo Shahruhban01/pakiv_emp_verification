@@ -9,7 +9,7 @@
     "seed:admin": "node scripts/seedAdmin.js",
     "seed:employees": "node scripts/seedEmployees.js",
     "seed:all": "node scripts/seedAdmin.js && node scripts/seedEmployees.js",
-    "test": "node --test test/**/*.test.js"
+    "test": "node --test test/api.test.js"
   },
   "keywords": [
     "pakiv",

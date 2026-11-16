@@ -9,7 +9,7 @@
     "seed:admin": "node backend/scripts/seedAdmin.js",
     "seed:employees": "node backend/scripts/seedEmployees.js",
     "seed": "node backend/scripts/seedAdmin.js && node backend/scripts/seedEmployees.js",
-    "test": "cd backend && npm test"
+    "test": "node --test backend/test/api.test.js"
   },
   "keywords": [
     "pakiv",
