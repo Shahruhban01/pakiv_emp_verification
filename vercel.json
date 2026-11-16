@@ -1,0 +1,58 @@
+{
+  "version": 2,
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/api/index.js"
+    },
+    {
+      "source": "/api",
+      "destination": "/api/index.js"
+    },
+    {
+      "source": "/verifyemp",
+      "destination": "/frontend/verifyemp/index.html"
+    },
+    {
+      "source": "/admin",
+      "destination": "/frontend/admin/index.html"
+    },
+    {
+      "source": "/admin/",
+      "destination": "/frontend/admin/index.html"
+    },
+    {
+      "source": "/admin/login",
+      "destination": "/frontend/admin/login.html"
+    },
+    {
+      "source": "/admin/employees",
+      "destination": "/frontend/admin/employees.html"
+    },
+    {
+      "source": "/admin/employee-form",
+      "destination": "/frontend/admin/employee-form.html"
+    },
+    {
+      "source": "/css/(.*)",
+      "destination": "/frontend/css/$1"
+    },
+    {
+      "source": "/js/(.*)",
+      "destination": "/frontend/js/$1"
+    },
+    {
+      "source": "/assets/(.*)",
+      "destination": "/frontend/assets/$1"
+    },
+    {
+      "source": "/",
+      "destination": "/frontend/index.html"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/frontend/$1"
+    }
+  ]
+}
+
