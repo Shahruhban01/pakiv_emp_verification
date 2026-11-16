@@ -1,0 +1,257 @@
+/* ==========================================================================
+   PAKIV EMPLOYEE VERIFICATION PORTAL - RESPONSIVE & PRINT MEDIA STYLES
+   ========================================================================== */
+
+/* ----------------- Tablets & Medium Screens (<= 992px) ----------------- */
+@media (max-width: 992px) {
+  /* Verification Certificate layout */
+  .verification-body {
+    grid-template-columns: 200px 1fr;
+    gap: 2rem;
+  }
+
+  .verification-qr-column {
+    grid-column: 1 / -1;
+    border-top: 1px solid var(--color-border-subtle);
+    padding-top: 1.5rem;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  /* Admin Layout */
+  .admin-sidebar {
+    transform: translateX(-100%);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .admin-sidebar.open {
+    transform: translateX(0);
+  }
+
+  .admin-main {
+    margin-left: 0;
+  }
+
+  .btn-mobile-sidebar-toggle {
+    display: inline-flex;
+  }
+}
+
+/* ----------------- Mobile Devices (<= 768px) ----------------- */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.15rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+    padding: 0 0.5rem;
+  }
+
+  .search-card {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0.85rem;
+  }
+
+  .search-actions {
+    justify-content: flex-end;
+  }
+
+  .btn-search-submit {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .location-badge {
+    display: none; /* Hide location tag in header on small mobile screens to keep clean */
+  }
+
+  /* Verification Certificate */
+  .verification-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.5rem;
+  }
+
+  .verification-status-banner {
+    padding: 1rem 1.5rem;
+  }
+
+  .verification-body {
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+  }
+
+  .verification-details-column {
+    border-right: none;
+    padding-right: 0;
+  }
+
+  .details-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .verification-qr-column {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .verification-footer {
+    padding: 1.25rem 1.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* Admin stats & forms */
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+    padding: 1.25rem;
+  }
+
+  .admin-content {
+    padding: 1.25rem;
+  }
+
+  .admin-topbar {
+    padding: 0 1.25rem;
+  }
+}
+
+/* ----------------- Extra Small Mobile (<= 480px) ----------------- */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.75rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .results-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .employee-card-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .employee-card-meta {
+    justify-content: center;
+  }
+
+  .login-card {
+    padding: 2rem 1.5rem;
+  }
+}
+
+/* ----------------- PRINT STYLESHEET ----------------- */
+@media print {
+  /* Hide all unnecessary UI elements when printing */
+  .site-header,
+  .site-footer,
+  .btn-print,
+  .btn-header-admin,
+  .search-container,
+  .search-hints,
+  .results-section,
+  .hero-section,
+  .trust-section,
+  .toast-container,
+  .admin-sidebar,
+  .admin-topbar,
+  .btn-view-verification,
+  .verification-actions {
+    display: none !important;
+  }
+
+  body {
+    background-color: #FFFFFF !important;
+    color: #000000 !important;
+    font-size: 12pt;
+    padding: 0;
+    margin: 0;
+  }
+
+  .container,
+  .container-narrow {
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .verification-wrapper {
+    padding: 0 !important;
+  }
+
+  .verification-card {
+    border: 2px solid #174E63 !important;
+    box-shadow: none !important;
+    border-radius: 8px !important;
+    page-break-inside: avoid;
+  }
+
+  .verification-ribbon {
+    height: 6px !important;
+    background: #174E63 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .verification-status-banner {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    border-bottom: 1px solid #CCCCCC !important;
+  }
+
+  .verification-body {
+    grid-template-columns: 180px 1fr 160px !important;
+    padding: 1.5rem !important;
+    gap: 1.5rem !important;
+  }
+
+  .verification-photo-wrap {
+    width: 160px !important;
+    height: 190px !important;
+    border: 1px solid #CCCCCC !important;
+  }
+
+  .qr-box-wrap {
+    border: 1px solid #CCCCCC !important;
+    box-shadow: none !important;
+  }
+
+  .btn-qr-download {
+    display: none !important;
+  }
+
+  .verification-footer {
+    border-top: 1px solid #CCCCCC !important;
+    background-color: #FAFAFA !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Add official certificate seal watermarks */
+  .verification-card::after {
+    content: "OFFICIAL VERIFIED RECORD • PAKIV CORPORATE REGISTRY";
+    display: block;
+    text-align: center;
+    font-size: 9pt;
+    font-weight: 700;
+    color: #687887;
+    padding: 8px;
+    letter-spacing: 1px;
+    border-top: 1px dashed #DDDDDD;
+  }
+}
+

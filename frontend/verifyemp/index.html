@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Verification Certificate — Pakiv</title>
+  <meta name="description" content="Official Pakiv employment verification record and authentic credential validation.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/assets/pakiv-logo.svg">
+
+  <!-- Google Fonts: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand-wrapper">
+        <a href="/" class="brand-logo-link" title="Pakiv Home">
+          <img src="/assets/pakiv-logo.svg" alt="Pakiv Employee Verification" class="brand-logo-img">
+        </a>
+        <span class="location-badge">
+          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
+          Baramulla, J&K
+        </span>
+      </div>
+
+      <div class="header-actions">
+        <a href="/" class="btn-secondary" style="font-size: 0.8125rem;">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <span>Search Registry</span>
+        </a>
+        <a href="/admin/login.html" class="btn-header-admin">
+          <span>Admin Portal</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Certificate View -->
+  <main class="verification-wrapper">
+    <div class="container-narrow" id="verification-card-container">
+      <!-- Injected by verification.js -->
+      <div class="state-box">
+        <div class="spinner"></div>
+        <h4 class="state-title">Loading Official Verification Record...</h4>
+        <p class="state-text">Querying cryptographic records from the Pakiv employment repository.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-brand-title">PAKIV</div>
+          <p class="footer-brand-desc">
+            Official Employee Verification Registry. Powered by Cloudflare R2 and MongoDB Atlas.
+          </p>
+          <div class="footer-location">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Baramulla, Jammu & Kashmir, 193101</span>
+          </div>
+        </div>
+
+        <div class="footer-links-col">
+          <h5>Verification Actions</h5>
+          <ul class="footer-links-list">
+            <li><a href="/">Search Another Employee</a></li>
+            <li><a href="javascript:window.print()">Print This Certificate</a></li>
+            <li><a href="/admin/login.html">Administrator Login</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Pakiv. Verified Official Employment Record.</div>
+        <div>Hosted on employees.pakiv.com</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="/js/qrcode.min.js"></script>
+  <script src="/js/api.js"></script>
+  <script src="/js/verification.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,19 @@
+{
+  "name": "pakiv-employee-verification",
+  "version": "1.0.0",
+  "description": "Pakiv Employee Verification Portal - Full Stack System",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "node --watch backend/server.js",
+    "install:backend": "cd backend && npm install",
+    "seed": "cd backend && npm run seed:all",
+    "test": "cd backend && npm test"
+  },
+  "keywords": [
+    "pakiv",
+    "employee-verification"
+  ],
+  "author": "Pakiv Engineering Team",
+  "license": "UNLICENSED"
+}
+
